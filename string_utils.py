@@ -5,7 +5,7 @@ def normalize_string(text):
     Input: một chuỗi ký tự.
     Output: chuỗi đã bỏ khoảng trắng thừa.
     """
-    return " ".join(text.split())
+    return text
 
 
 if __name__ == "__main__":
