@@ -71,3 +71,21 @@ Secret cần khai báo trong Settings → Secrets and variables → Actions:
 | `VM_SSH_KEY` | private key dành riêng cho GitHub Actions |
 
 `.env` và `secrets/gcp-sa.json` không bao giờ lên GitHub, tạo tay trên VM một lần.
+## Module `string_utils.py`
+
+### Chức năng
+Function `normalize_string(text)` loại bỏ khoảng trắng ở đầu và cuối chuỗi,
+đồng thời gộp nhiều khoảng trắng liên tiếp thành một dấu cách.
+
+### Input
+- `text`: chuỗi ký tự cần chuẩn hóa.
+
+### Output
+- Chuỗi đã chuẩn hóa khoảng trắng.
+
+### Ví dụ
+```python
+from string_utils import normalize_string
+
+result = normalize_string("  Hello    Git   World  ")
+print(result)
